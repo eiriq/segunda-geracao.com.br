@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade e Regras</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #222630;
+            color: #9c82b2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+            overflow-x: hidden;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .text-section {
+            margin-top: 20px;
+            color: white;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .text-section .highlight {
+            color: #a474b4;
+        }
+
+        .rules {
+            margin-top: 40px;
+            color: white;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .rules h2 {
+            color: #a474b4;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .rules ul {
+            padding-left: 20px;
+        }
+
+        .rules ul li {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .rules ul li span {
+            color: #a474b4;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: right 0.3s ease-in-out;
+        }
+
+        .hamburger input {
+            display: none;
+        }
+
+        .hamburger svg {
+            height: 3em;
+            transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .line {
+            fill: none;
+            stroke: white;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 3;
+            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .line-top-bottom {
+            stroke-dasharray: 12 63;
+        }
+
+        .hamburger input:checked + svg {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger input:checked + svg .line-top-bottom {
+            stroke-dasharray: 20 300;
+            stroke-dashoffset: -32.42;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #333847;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            border-radius: 15px 0 0 15px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid white;
+            z-index: 1002;
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .sidebar h2 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            color: #9c82b2;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #9c82b2, 0 0 20px #9c82b2;
+        }
+
+        .sidebar.active + .hamburger {
+            right: 270px;
+        }
+
+        /* Background overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .overlay.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sua Privacidade e Regras</h1>
+
+    <div class="content">
+        <div class="text-section">
+            <p>Olá a todos os membros da <span class="highlight">2º Geração</span>! Esperamos que estejam todos bem.</p>
+            <p>Essa é nossa sessão para apresentar um pouco sobre a <span class="highlight">segurança</span>, <span class="highlight">privacidade</span> e <span class="highlight">regulamentação</span> do nosso servidor.</p>
+            <p>Como visto recentemente em notícias de servidores que andam sofrendo com a presença de conteúdo sensível <span class="highlight">infantil</span>, <span class="highlight">difamatório</span>, <span class="highlight">preconceituoso</span>, entre outros, estamos direcionando todos os nossos esforços para evitar que nosso servidor exponha qualquer um desses conteúdos aos nossos usuários, mantendo um servidor <span class="highlight">agradável</span>, <span class="highlight">limpo</span> e <span class="highlight">útil</span> para toda a nossa comunidade.</p>
+            <p>Para isso, nosso servidor conta com a ajuda e bom senso de todos os envolvidos e participantes. Tratamos rigorosamente qualquer <span class="highlight">injustiça</span> que aconteça com nossos membros, sendo na nossa sessão de <span class="highlight">Comunicação</span>, onde você pode deixar sua queixa ou ponto de melhora utilizando o nosso servidor.</p>
+            <p>Fique atento às regras para evitar problemas na utilização do servidor e para manter a <span class="highlight">paz</span> na comunidade. Paz, e que todos curtam e aproveitem o máximo que o servidor pode oferecer!</p>
+        </div>
+
+        <div class="rules">
+            <h2>Regras:</h2>
+            <ul>
+                <li><span>Regra 1:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li><span>Regra 2:</span> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                <li><span>Regra 3:</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li><span>Regra 4:</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                <li><span>Regra 5:</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Background Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu Geração!</h2>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="admin.html">Administração</a></li>
+            <li><a href="https://discord.com/invite/fukpQCvb">Entrar</a></li>
+            <li><a href="comun.html">Comunicação</a></li>
+           <li><a href="conhecer.html">Conhecer!</a></li>
+        </ul>
+    </div>
+
+    <!-- Hamburger Button -->
+    <label class="hamburger">
+        <input type="checkbox" id="hamburgerToggle">
+        <svg viewBox="0 0 32 32">
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+        </svg>
+    </label>
+
+    <script>
+        // Toggle Sidebar
+        const hamburgerToggle = document.getElementById('hamburgerToggle');
+        const sidebar = document.getElementById('sidebar');
+        const hamburger = document.querySelector('.hamburger');
+        const overlay = document.getElementById('overlay');
+
+        hamburgerToggle.addEventListener('change', function() {
+            if (this.checked) {
+                sidebar.classList.add('active');
+                hamburger.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                sidebar.classList.remove('active');
+                hamburger.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+
+        // Fade-in Effect
+        window.addEventListener('load', function() {
+            document.body.style.opacity = 1;
+            document.querySelector('.content').style.opacity = 1;
+        });
+    </script>
+
+</body>
+</html>
+
